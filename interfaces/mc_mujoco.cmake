@@ -29,6 +29,14 @@ if(WITH_HRP4)
   AddProject(hrp4_mj_description
     GITE mc-hrp4/hrp4_mj_description
     GIT_TAG origin/master
-    DEPENDS mc_mujoco hrp4
+    DEPENDS mc_mujoco
+  )
+endif()
+
+if(WITH_Panda)
+  AddProject(franka_sim
+    GITHUB Hugo-L3174/franka_sim
+    GIT_TAG origin/hugo-master
+    DEPENDS mc_mujoco mc_panda
   )
 endif()
